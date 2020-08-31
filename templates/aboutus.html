@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+    html, body { margin: 0; padding: 0 }
+    body {font-family: "Raleway", sans-serif}
+    h1 {font-size: 12vh}
+    h2 {font-size: 4vh}
+    :root {
+
+      --main-window-color: #222222;
+      --main-bg-color: #dddddd;
+      //Blue:
+      //--main-bg-color: #192464;
+      //--main-window-color: #091439;
+      //Teal:
+      //--main-bg-color: #113141;
+      //--main-window-color: #335363;
+
+      --accent-color-1: #550000;
+      --subtitle-color: #aaaaba;
+    }
+    /* Text Styles*/
+    .small-text {
+      font-size: 14px;
+      color: var(--subtitle-color);
+    }
+    .mid-text {
+      font-size: 18px;
+      color: var(--subtitle-color);
+    }
+    .link {
+      color: var(--subtitle-color);
+    }
+
+    /*Background format (same for all pages)*/
+
+    body {
+      background-color: var(--main-bg-color);
+    }
+    .content {
+      background-color: var(--main-bg-color);
+      margin: 2rem;
+    }
+
+    /* Header (Same for all pages) */
+    .header {
+      z-index: 1;
+      height: auto;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      background-color: var(--main-window-color);
+      box-shadow: 0px 0px 8px #000000;
+    }
+
+    .navbar {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 7rem));
+      grid-gap: 0rem;
+
+    }
+    .navbar > div {
+      background-color: var(--main-window-color);
+      border-radius: 0rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .navbar div:hover {
+      background-color: #555;
+      color: white;
+    }
+    .main-viewport {
+      float: left;
+      width: auto;
+
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    /*Page Content (Varies with the page)*/
+
+
+    .title-block {
+      background-color: var(--main-window-color);
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+    .title {
+      font-size: 2vw;
+      color: var(--subtitle-color);
+      text-align: center;
+
+    }
+
+    .subtitle {
+      color: var(--subtitle-color);
+      text-align: center;
+
+      //font-size: 0.5vw;
+    }
+    .searchbar {
+      background-color: white;
+      border-radius: 0.5rem;
+      font: 24px;
+      color: var(--subtitle-color);
+      height: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      width: 500px;
+
+    }
+    textarea:focus, input:focus {
+      outline: solid gray;
+    }
+    .button {
+      background-color: var(--main-window-color);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: none;
+      font: 24px;
+      color: var(--subtitle-color);
+
+    }
+    .button:hover {
+      background-color: #555;
+      color: white;
+    }
+    .search-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+      grid-gap: 1rem;
+      height: 50vh;
+      overflow: scroll;
+
+    }
+    .search-results > div {
+      background-color: var(--main-window-color);
+      border-radius: 0.5rem;
+      padding: 1rem;
+
+    }
+
+    /*Advertisements on side (Same for all pages)*/
+    .left-banner {
+      float: left;
+      width: auto;
+
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      margin-right: 1rem;
+    }
+    .advertisements {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px));
+      grid-gap: 1rem;
+
+    }
+    .advertisements > div {
+      background-color: var(--main-window-color);
+      border-radius: 0.5rem;
+
+
+      padding: 1rem;
+    }
+
+    /* Footer (Same for all pages)*/
+    .footer-block {
+      background-color: var(--main-window-color);
+      padding: 0rem;
+      border-radius: 0rem;
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(10vw, 25vw));
+      bottom: 0;
+      height: auto;
+      width: 100vw;
+      grid-gap: 0rem;
+
+      background-color: var(--main-window-color);
+    }
+    .footer > div {
+      background-color: var(--main-window-color);
+      border-radius: 0rem;
+
+
+      padding: 1rem;
+    }
+
+
+  </style>
+  <body>
+    <!-- HEADER AND NAVBAR !-->
+
+    <div class = "header small-text">
+      <div class = "navbar">
+        <div>
+          <a class = "link" href = "..">Home</a>
+        </div>
+        <div>
+          <a class = "link" href = " ">About us</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Leave content blank for blank template. -->
+    <!-- HOME PAGE CONTENT !-->
+
+    <div class = "content">
+
+      <div class = "advertisements left-banner">
+        <div>
+          Advertisement.
+        </div>
+        <div>
+          Advertisement.
+        </div>
+        <div>
+          Advertisement.
+        </div>
+
+
+
+      </div>
+
+
+      <!-- SEARCHBAR AND SEARCH RESULTS !-->
+
+
+      <div class = "main-viewport">
+        <p>
+            This website was made by Hunter Haglid and Brad Yuan.
+
+
+        </p>
+        <p>
+            Textbook Search uses a process called "web scraping" to gather information from textbook sellers such as Amazon and Ebay. Web scraping allows a computer program to access and read a website. In essence, this program reads these websites for you, providing the results of its search all in one place.
+
+
+        </p>
+
+      </div>
+    </div>
+    <div class = "footer small-text">
+      <div>
+        <h3>Our Organization</h3> <br>
+        <a class = "link" href = "hunter314.pythonanywhere.com/about">About us</a> <br>
+        Contact us
+      </div>
+      <div>
+        <h3>Partner Organizations</h3> <br>
+        We're not big <br>
+        enough yet.
+      </div>
+      <div>
+        <h3>Information</h3> <br>
+        How It Works <br>
+        Webscraping
+      </div>
+    </div>
+    <form>
+    </form>
+  </body>
+
+</html>
