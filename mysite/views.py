@@ -25,7 +25,7 @@ def search(request):
   if(searchTerm is not None):
 
     scrapers = []
-    #scrapers.append(AmazonWebScraper(searchTerm))
+    scrapers.append(AmazonWebScraper(searchTerm))
     scrapers.append(EbayWebScraper(searchTerm))
     for scraper in scrapers:
       theseProducts = scraper.getProducts()
