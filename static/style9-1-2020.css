@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+html, body { margin: 0; padding: 0 }
+body {font-family: "Raleway", sans-serif}
+h1 {font-size: 12vh}
+h2 {font-size: 4vh}
+:root {
+
+  --main-window-color: #222222;
+  --main-bg-color: #dddddd;
+  --main-border-radius: 0rem;
+  //Blue:
+  //--main-bg-color: #192464;
+  //--main-window-color: #091439;
+  //Teal:
+  //--main-bg-color: #113141;
+  //--main-window-color: #335363;
+
+  --accent-color-1: #550000;
+  --subtitle-color: #aaaaba;
+}
+/* Text Styles*/
+.small-text {
+  font-size: 14px;
+  color: var(--subtitle-color);
+}
+.mid-text {
+  font-size: 18px;
+  color: var(--subtitle-color);
+}
+.link {
+  color: var(--subtitle-color);
+}
+
+/*Background format (same for all pages)*/
+
+body {
+  background-color: var(--main-bg-color);
+}
+.content {
+  background-color: var(--main-bg-color);
+  margin: 2rem;
+}
+
+/* Header (Same for all pages) */
+.header {
+  z-index: 1;
+  height: auto;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: var(--main-window-color);
+  text-shadow: 2px 2px 4px #000000;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 7rem));
+  grid-gap: 0rem;
+  box-shadow: 0px 4px 8px #000000;
+
+}
+.navbar > div {
+  background-color: var(--main-window-color);
+  border-radius: 0rem;
+  text-align: center;
+  padding: 1rem;
+}
+.navbar div:hover {
+  background-color: #555;
+  color: white;
+}
+.main-viewport {
+  float: left;
+  width: auto;
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+/*Page Content (Varies with the page)*/
+
+
+.title-block {
+  /*background-color: var(--main-window-color);*/
+  padding: 0.5rem;
+  border-radius: var(--main-border-radius);
+  background-image: url("http://hunter314.pythonanywhere.com/static/LibraryBackground (3).jpg");
+  /*Box shadow, when used like this, adds a grey transparent layer over the image. This makes the title text more readable. */
+  box-shadow: inset 0 0 0 1000px rgba(11,11,11,.5);
+  /*Background attachment lets image remain fixed when the user scrolls.*/
+  background-attachment: fixed;
+}
+.title {
+  font-size: 2vw;
+  color: var(--subtitle-color);
+  text-align: center;
+  text-shadow: 2px 4px 8px #000000;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  text-align: center;
+
+  //font-size: 0.5vw;
+}
+.searchbar {
+  background-color: white;
+  border-radius: 0.5rem;
+  font: 24px;
+  color: var(--subtitle-color);
+  height: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  width: 60vw;
+
+}
+.searchbar:hover {
+  box-shadow: 0px 0px 12px #ccccff;
+}
+textarea:focus, input:focus {
+  outline: solid gray;
+}
+.button {
+  background-color: var(--main-window-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  font: 24px;
+  color: var(--subtitle-color);
+
+}
+.button:hover {
+  background-color: #555;
+  color: white;
+}
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40vw, 70vw));
+  grid-gap: 1rem;
+  height: 50vh;
+  overflow: scroll;
+
+}
+.search-results > div {
+  background-color: var(--main-window-color);
+  border-radius: var(--main-border-radius);
+  padding: 1rem;
+
+}
+
+/*Advertisements on side (Same for all pages)*/
+.left-banner {
+  float: left;
+  width: auto;
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-right: 1rem;
+}
+.advertisements {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20vw));
+  grid-gap: 1rem;
+
+}
+.advertisements > div {
+  background-color: var(--main-window-color);
+  border-radius: var(--main-border-radius);
+
+
+  padding: 1rem;
+}
+.optionbuttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px));
+  grid-gap: 1rem;
+
+}
+.optionbuttons {
+  background-color: var(--main-window-color);
+  border-radius: 0.5rem;
+
+
+  padding: 1rem;
+}
+/* Footer (Same for all pages)*/
+.footer-block {
+  background-color: var(--main-window-color);
+  padding: 0rem;
+  border-radius: 0rem;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10vw, 25vw));
+  bottom: 0;
+  height: auto;
+  width: 100vw;
+  grid-gap: 0rem;
+
+  background-color: var(--main-window-color);
+}
+.footer > div {
+  background-color: var(--main-window-color);
+  border-radius: 0rem;
+
+
+  padding: 1rem;
+}
