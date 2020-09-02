@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#STATIC_ROOT = "/home/hunter314/TextbookSearchDjango/static"
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/hunter314/TextbookSearch/templates'],
+        'DIRS': ['/home/hunter314/TextbookSearchDjango/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,6 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATICFILES_DIRS = [
+   os.path.join(BASE_DIR, "static/"),
+]
+STATIC_ROOT = "/home/hunter314/TextbookSearchDjango/static/"
 STATIC_URL = '/static/'
+
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'

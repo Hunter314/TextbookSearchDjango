@@ -82,9 +82,12 @@
 
 
     .title-block {
-      background-color: var(--main-window-color);
+      /*background-color: var(--main-window-color);*/
       padding: 0.5rem;
       border-radius: var(--main-border-radius);
+      background-image: url("http://hunter314.pythonanywhere.com/static/LibraryBackground (3).jpg");
+      box-shadow: inset 0 0 0 1000px rgba(11,11,11,.5);
+      background-attachment: fixed;
     }
     .title {
       font-size: 2vw;
@@ -194,6 +197,14 @@
 
 
   </style>
+  {% load static %}
+  <head>
+      <!-- NOTE: Poor practice to hardcode image link. If static file location is changed, this must be changed as well.!-->
+    <link rel = "icon" href =
+"http://hunter314.pythonanywhere.com/static/favicon-16x16.png"
+        type = "image/x-icon">
+      <title>Textbook Search</title>
+  </head>
   <body>
     <!-- HEADER AND NAVBAR !-->
 
@@ -242,6 +253,7 @@
 
       <div class = "main-viewport">
 
+        <!--<img src = "{% static 'TextbookSearchIcon.png' %}" alt = logo>!-->
         <form action="{% url 'search_results' %}" method="get">
             <input name="q" class = "searchbar mid-text" type="text" placeholder="Enter search here...">
             <input class = "button" type="submit">
