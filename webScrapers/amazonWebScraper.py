@@ -148,6 +148,7 @@ class AmazonWebScraper:
             thisShipPrice = AmazonWebScraper.parseShipPrice(self, thisShipPriceString, thisPrice)
             thisRating = AmazonWebScraper.parseRating(self, thisRatingString)
             Products.append(Product(thisName, thisPrice, thisShipPrice, thisUrl, thisRating, "Amazon"))
+
         return Products
     def getProductsAndPrint(self):
 

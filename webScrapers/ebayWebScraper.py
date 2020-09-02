@@ -70,27 +70,27 @@ class EbayWebScraper:
                     bookRating = ratingprocess(bookRating.find(class_="clipped").text)
                 else:
                     bookRating = 0
-                
+
                 if bookDistributor[0:2] == "by":
                     bookDistributor = bookDistributor[3:]
                 else:
-                    bookDistributor = "N/A"
-                
+                    bookDistributor = "Ebay"
+
                 bookPrice = 0
                 if bookListing.find(class_="s-item__price").text[-1:] != "g":
                     bookPrice = priceprocess(bookListing.find(class_="s-item__price").text)
 
                 shippingPrice = 0
                 if bookListing.find(class_="s-item__shipping s-item__logisticsCost").text[-1:] != "g":
-                   shippingPrice = priceprocess(bookListing.find(class_="s-item__shipping s-item__logisticsCost").text)            
+                   shippingPrice = priceprocess(bookListing.find(class_="s-item__shipping s-item__logisticsCost").text)
 
                 Products.append(Product(bookName, bookPrice, shippingPrice, bookUrl, bookRating, bookDistributor))
-                
+
                 countGood += 1
             if countGood == 10:
                 break
         return sorted(Products)
-    
+
     def getProductsAndPrint(self):
         Products = self.getProducts()
         for thisProduct in Products:

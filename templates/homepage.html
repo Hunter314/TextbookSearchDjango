@@ -38,16 +38,14 @@
 
         </div>
       </div>
-      <div class = "advertisements left-banner">
+      <div class = "advertisements left-banner small-text">
         <div>
-          Advertisement.
+
         </div>
         <div>
-          Advertisement.
+          Tip: Searching by an<br> ISBN number can help<br> you find more accurate<br> results.
         </div>
-        <div>
-          Advertisement.
-        </div>
+
 
 
 
@@ -80,7 +78,7 @@
                 <br>Price: ${{listing.price|floatformat:2}}
               {% endif %}
               {% if listing.shipPrice is not None %}
-                <br>Price: ${{listing.shipPrice|floatformat:2}}
+                <br>Shipping Price: ${{listing.shipPrice|floatformat:2}}
               {% endif %}
               {% if listing.rating is not None %}
                 <br>Rating: {{listing.rating|floatformat:1}} / 5 stars
@@ -96,8 +94,8 @@
 
         </div>
         {% else %}
-        <div class = "search-results small-text">
-        Search for a textbook and we will compare prices from all the major retailers!
+        <div class = "search-results small-text-dark">
+        Search for a textbook and we will compare prices from all the major retailers. It may take a few seconds.
         </div>
         {% endif %}
       </div>

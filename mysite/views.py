@@ -25,6 +25,11 @@ def search(request):
   if(searchTerm is not None):
 
     scrapers = []
+    #scraper = AmazonWebScraper(searchTerm)
+
+    #print('compete!')
+    #products = scraper.getProducts()
+
     scrapers.append(AmazonWebScraper(searchTerm))
     scrapers.append(EbayWebScraper(searchTerm))
     for scraper in scrapers:
@@ -36,10 +41,6 @@ def search(request):
     products = None
 
 
-  #scraper = AmazonWebScraper(searchTerm)
-
-  #print('compete!')
-  #products = scraper.getProducts()
   template_name = 'homepage.html'
   context= {'productList': products, 'searchTerm': searchTerm}
 

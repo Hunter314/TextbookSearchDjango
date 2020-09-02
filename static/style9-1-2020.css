@@ -15,13 +15,17 @@ h2 {font-size: 4vh}
   //--main-bg-color: #113141;
   //--main-window-color: #335363;
 
-  --accent-color-1: #550000;
+  --accent-color-1: #335363;
   --subtitle-color: #aaaaba;
 }
 /* Text Styles*/
 .small-text {
-  font-size: 14px;
+  font-size: 2vh;
   color: var(--subtitle-color);
+}
+.small-text-dark {
+  font-size: 14px;
+  color: var(--accent-color-1);
 }
 .mid-text {
   font-size: 18px;
