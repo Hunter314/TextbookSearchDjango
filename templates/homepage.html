@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  {% load static %}
+    {% load dictionaries %}
 
+  {% load static %}
   <head>
 
       <!-- NOTE: Poor practice to hardcode image link. If static file location is changed, this must be changed as well.!-->
@@ -68,8 +69,14 @@
         {% if searchTerm is not None %}
 
         <div class = "search-results small-text">
+          Finding results for "{{searchTerm}}".
+          Found
+          {% for source in sources %}
 
-          Finding results for "{{searchTerm}}"
+          {{ numResults|lookup:source }} results from {{source}},
+
+          {% endfor %}
+          which are displayed below.
           {% for listing in productList %}
             <div>
               <a href={{listing.url}}>{{listing.name}}</a>

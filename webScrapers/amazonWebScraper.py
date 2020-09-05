@@ -9,6 +9,7 @@ SORTING_MODE = 1
 class AmazonWebScraper:
     searchItem = "test"
     parsedContent = "blank"
+    distributorName = "Amazon"
     def __init__(self, searchTerm):
         self.searchItem = searchTerm
 
@@ -33,7 +34,8 @@ class AmazonWebScraper:
             return float(stringInput)
         except ValueError:
             return None
-
+    def getDistributorName(self):
+        return self.distributorName
     def parsePrice(self, priceString):
         numString = priceString.replace('$', '')
         return AmazonWebScraper.safeFloat(self, numString)

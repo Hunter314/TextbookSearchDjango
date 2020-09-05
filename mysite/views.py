@@ -19,9 +19,14 @@ def home(request):
   context= {'productList': products, 'searchTerm': searchTerm}
   return render(request, 'homepage.html', context)
 
+
+
 def search(request):
   searchTerm = request.GET.get('q')
   products = []
+  sources = []
+  numResults = {"test":0}
+
   if(searchTerm is not None):
 
     scrapers = []
@@ -31,18 +36,24 @@ def search(request):
     #products = scraper.getProducts()
 
     scrapers.append(AmazonWebScraper(searchTerm))
+
     scrapers.append(EbayWebScraper(searchTerm))
     for scraper in scrapers:
       theseProducts = scraper.getProducts()
+      scraperName = scraper.getDistributorName()
+      sources.append(scraperName)
+
+      numResults[scraperName] = 0 + len(theseProducts)
       for product in theseProducts:
         products.append(product)
+
     products = checkProducts(products)
+
   else:
     products = None
 
-
   template_name = 'homepage.html'
-  context= {'productList': products, 'searchTerm': searchTerm}
+  context= {'productList': products, 'searchTerm': searchTerm, 'numResults':numResults, 'sources':sources}
 
   return render(request, 'homepage.html', context)
 

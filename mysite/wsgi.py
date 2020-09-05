@@ -7,6 +7,7 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
+# to restart the server, apparently you can just modify this document and save it
 import os
 
 from django.core.wsgi import get_wsgi_application

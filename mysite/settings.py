@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 #STATIC_ROOT = "/home/hunter314/TextbookSearchDjango/static"
 
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'f)0wc**rqzxnsmh*+$1p3x)gi)eigk8rfe*4!(2-81d-r#_=9-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#PYTHONPATH="/TextbookSearchDjango/:$PYTHONPATH"
 ALLOWED_HOSTS = []
 
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'useful_tags',
 ]
 
 MIDDLEWARE = [

@@ -31,6 +31,7 @@ SORTING_MODE = 1
 class EbayWebScraper:
     searchItem = "test"
     parsedContent = "blank"
+    distributorName = "Ebay"
     soup = None #BeautifulSoup representation of website
     def __init__(self, searchTerm):
         self.searchItem = searchTerm
@@ -45,7 +46,8 @@ class EbayWebScraper:
 
         self.soup = BeautifulSoup(html_file, 'html5lib')
         self.parsedContent = html_file
-
+    def getDistributorName(self):
+        return self.distributorName;
 
     def getProducts(self):
         listProducts = self.soup.find_all(class_='s-item')

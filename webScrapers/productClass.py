@@ -16,7 +16,10 @@ class Product:
         self.url = url
     def __lt__(self, other):
         if SORTING_MODE == 1:
-            return self.price + self.shipPrice < other.price + other.shipPrice
+            if(self.shipPrice is not None and other.shipPrice is not None):
+                return self.price + self.shipPrice < other.price + other.shipPrice
+            else:
+                return self.price < other.price
         if SORTING_MODE == 2:
             return self.price < other.price
         if SORTING_MODE == 3:
